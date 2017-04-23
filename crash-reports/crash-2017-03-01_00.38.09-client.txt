@@ -1,0 +1,202 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  ShetiPhian-ASM (shetiphiancore-1.10.0-3.3.7.jar)
+  LoadingPlugin (Quark-r1.1-70.jar)
+  AstralCore (astralsorcery-1.1.4-beta.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  CCLCorePlugin (CodeChickenLib-1.10.2-2.5.4.218-universal.jar)
+Contact their authors BEFORE contacting forge
+
+// Ooh. Shiny.
+
+Time: 3/1/17 12:38 AM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from EnderStorage (EnderStorage)
+Caused by: java.lang.RuntimeException: java.io.FileNotFoundException: C:\Users\Ekuman\Documents\Curse\Minecraft\Instances\EMP 2.0b\config\EnderStorage.cfg (Det går inte att komma åt filen eftersom den
+används av en annan process)
+	at codechicken.lib.config.ConfigFile.saveConfig(ConfigFile.java:103)
+	at codechicken.lib.config.ConfigTagParent.setComment(ConfigTagParent.java:64)
+	at codechicken.lib.config.ConfigFile.setComment(ConfigFile.java:66)
+	at codechicken.enderstorage.handler.ConfigurationHandler.init(ConfigurationHandler.java:34)
+	at codechicken.enderstorage.EnderStorage.preInit(EnderStorage.java:33)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at net.minecraftforge.fml.common.FMLModContainer.handleModStateEvent(FMLModContainer.java:616)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:243)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:145)
+	at net.minecraftforge.fml.common.Loader.preinitializeMods(Loader.java:624)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:259)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:439)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:351)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.io.FileNotFoundException: C:\Users\Ekuman\Documents\Curse\Minecraft\Instances\EMP 2.0b\config\EnderStorage.cfg (Det går inte att komma åt filen eftersom den
+används av en annan process)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162)
+	at java.io.PrintWriter.<init>(PrintWriter.java:263)
+	at codechicken.lib.config.ConfigFile.saveConfig(ConfigFile.java:101)
+	... 40 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 520322520 bytes (496 MB) / 1711800320 bytes (1632 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx4096m -Xms256m -XX:PermSize=256m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2221 76 mods loaded, 76 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCH	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCH	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.3.2221.jar) 
+	UCH	Forge{12.18.3.2221} [Minecraft Forge] (forge-1.10.2-12.18.3.2221.jar) 
+	UCH	ccl-entityhook{1.0} [ccl-entityhook] (CodeChickenLib-1.10.2-2.5.4.218-universal.jar) 
+	UCH	ForgeEndertech{1.1.3.0} [Forge Endertech] (ForgeEndertech-1.10.2-1.1.3.0.jar) 
+	UCH	AdChimneys{1.10.2-1.1.4.0} [Advanced Chimneys] (AdChimneys-1.10.2-1.1.4.0.jar) 
+	UCH	additionalbanners{1.3.0.22} [Additional Banners] (AdditionalBanners-1.10.2-1.3.0.22.jar) 
+	UCH	animania{1.0.0} [Animania] (animania-1.10-1.0.0.jar) 
+	UCH	astralsorcery{1.1.4-beta} [Astral Sorcery] (astralsorcery-1.1.4-beta.jar) 
+	UCH	atg{2} [Alternate Terrain Generation] (atg-1.10.2-2.0.0.jar) 
+	UCH	Quark{r1.1-70} [Quark] (Quark-r1.1-70.jar) 
+	UCH	AutoRegLib{1.0-2} [AutoRegLib] (AutoRegLib-1.0-2.jar) 
+	UCH	bagginses{2.4.2d} [Bagginses] (Bagginses-1.10.2-3.0.4g.jar) 
+	UCH	Baubles{1.3.9} [Baubles] (Baubles-1.10.2-1.3.9.jar) 
+	UCH	BiblioCraft{2.2.1} [BiblioCraft] (BiblioCraft[v2.2.1][MC1.10.2].jar) 
+	UCH	guideapi{@VERSION@} [Guide-API] (Guide-API-1.10.2-2.0.3-46.jar) 
+	UCH	JEI{3.14.7.415} [Just Enough Items] (jei_1.10.2-3.14.7.415.jar) 
+	UCH	BloodMagic{1.10.2-2.1.4-73} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.10.2-2.1.4-73.jar) 
+	UCH	Botania{r1.9-340} [Botania] (Botania r1.9-340.jar) 
+	UCH	Chameleon{1.10-2.2.2} [Chameleon] (Chameleon-1.10-2.2.2.jar) 
+	UCH	mcmultipart{1.4.0} [MCMultiPart] (MCMultiPart-1.4.0-universal.jar) 
+	UCH	chiselsandbits{12.12} [Chisels & Bits] (chiselsandbits-12.12.jar) 
+	UCH	CodeChickenLib{2.5.4.218} [CodeChicken Lib] (CodeChickenLib-1.10.2-2.5.4.218-universal.jar) 
+	UCH	CodeChickenCore{2.4.0.101} [CodeChicken Core] (CodeChickenCore-1.10.2-2.4.0.101-universal.jar) 
+	UCH	cookingforblockheads{4.2.35} [Cooking for Blockheads] (CookingForBlockheads_1.10.2-4.2.35.jar) 
+	UCH	crafttweakerjei{1.0.1} [CraftTweaker JEI Support] (CraftTweaker-1.10.2-3.0.22.jar) 
+	UCH	MineTweaker3{3.0.22} [MineTweaker 3] (CraftTweaker-1.10.2-3.0.22.jar) 
+	UCH	ctgui{1.0.0} [CT-GUI] (CraftTweaker-1.10.2-3.0.22.jar) 
+	UCH	CustomMainMenu{2.0.2} [Custom Main Menu] (CustomMainMenu-MC1.10.2-2.0.2.jar) 
+	UCH	disenchanter{1.4} [Disenchanter] (disenchanter-[1.9.4]1.4.jar) 
+	UCH	StorageDrawers{1.10.2-3.6.0} [Storage Drawers] (StorageDrawers-1.10.2-3.6.0.jar) 
+	UCH	bitdrawers{0.35} [Drawers & Bits] (DrawersBits-1.10.2-0.35.jar) 
+	UCH	earthworks{1.1.1} [Earthworks] (Earthworks-1.10.2-1.1.1.jar) 
+	UCH	embers{0.104} [Embers] (embers-0.104.jar) 
+	UCE	EnderStorage{2.2.1.101} [EnderStorage] (EnderStorage-1.10.2-2.2.1.101-universal.jar) 
+	UCH	fairylights{2.0.6} [Fairy Lights] (fairylights-2.0.6-1.10.2.jar) 
+	UCH	FastLeaveDecay{1.2.3} [Fast Leave Decay] (FastLeaveDecay-MC1.10.2-1.2.3.jar) 
+	UCH	flatcoloredblocks{mc1.10-v4.4} [Flat Colored Blocks] (flatcoloredblocks-mc1.10-v4.4.jar) 
+	UCH	Waila{1.8.10} [Waila] (Hwyla-1.8.10-B24_1.10.2.jar) 
+	UCE	ftbl{0.0.0} [FTBLib] (FTBLib-1.10.2-3.3.0.jar) 
+	UCE	ftbu{0.0.0} [FTBUtilities] (FTBUtilities-1.10.2-3.4.0.jar) 
+	UCH	grapplemod{1.10.2-v9} [Grappling hook mod] (grapplemod-1.10-v9.jar) 
+	UCH	hopperducts{1.4.8} [Hopper Ducts] (hopperducts-mc1.9.4-1.4.8.jar) 
+	UCH	mantle{1.10.2-1.1.5.205} [Mantle] (Mantle-1.10.2-1.1.5.jar) 
+	UCH	tconstruct{1.10.2-2.6.3.500} [Tinkers' Construct] (TConstruct-1.10.2-2.6.3.jar) 
+	UCH	immersiveengineering{0.10-56} [Immersive Engineering] (ImmersiveEngineering-0.10-56.jar) 
+	UCH	inventorytweaks{1.61-58-a1fd884} [Inventory Tweaks] (InventoryTweaks-1.61-58.jar) 
+	UCH	ironchest{1.10.2-7.0.11.797} [Iron Chest] (ironchest-1.10.2-7.0.11.797.jar) 
+	UCH	justenoughdimensions{1.3.3} [Just Enough Dimensions] (justenoughdimensions-1.10.2-1.3.3.jar) 
+	UCH	jeresources{0.5.8.98} [Just Enough Resources] (JustEnoughResources-1.10.2-0.5.8.98.jar) 
+	UCH	loreexpansion{1.10.2-1.1.4-9} [Lore Expansion] (LoreExpansion-1.10.2-1.1.4-9.jar) 
+	UCH	mtlib{@VERSION@} [MTLib] (MTLib-1.0.1.jar) 
+	UCH	modtweaker{2.0.9} [Mod Tweaker] (ModTweaker2-2.0.9.jar) 
+	UCH	Morpheus{1.10.2-3.1.13} [Morpheus] (Morpheus-1.10.2-3.1.13.jar) 
+	UCH	natura{1.10.2-4.1.0.17} [Natura] (natura-1.10.2-4.1.0.17.jar) 
+	UCH	notenoughwands{1.5.4} [Not Enough Wands] (notenoughwands-1.1x-1.5.4.jar) 
+	UCH	packingtape{0.6.0} [Packing Tape] (PackingTape-1.10.2-0.6.0.jar) 
+	UCH	harvestcraft{1.9.4-1.10.2g} [Pam's HarvestCraft] (Pam's HarvestCraft 1.9.4-1.10.2h.jar) 
+	UCH	shetiphiancore{3.3.6} [ShetiPhian-Core] (shetiphiancore-1.10.0-3.3.7.jar) 
+	UCH	platforms{1.2.8} [Platforms] (platforms-1.10.0-1.2.8.jar) 
+	UCH	railcraft{10.0.1} [Railcraft] (Railcraft_1.10.2-10.0.1.jar) 
+	UCH	refinedstorage{1.2.22} [Refined Storage] (refinedstorage-1.2.22.jar) 
+	UCH	xreliquary{1.10.2-1.3.3.639} [Reliquary] (Reliquary-1.10.2-1.3.3.639.jar) 
+	UCH	roots{0.208} [Roots] (roots-0.208.jar) 
+	UCH	RTG{4.1.2.4} [Realistic Terrain Generation] (RTG-1.10.2-4.1.2.4.jar) 
+	UCH	rustic{0.0.4.1} [Rustic] (rustic-0.0.4.1.jar) 
+	UCH	stevescarts{2.1.4.83} [Steve's Carts 2] (StevesCarts-1.10.2-2.1.4.83.jar) 
+	UCH	storagedrawersextra{1.10-1.1.0} [Storage Drawers Extras] (StorageDrawersExtras-1.10-1.1.0.jar) 
+	UCH	taiga{1.2.6} [Tinkers Alloying Addon] (taiga-1.10.2-1.2.6.jar) 
+	UCH	totemic{1.9.4-0.7.9.1} [Totemic] (Totemic-1.9.4-0.7.9.1.jar) 
+	UCH	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCH	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCH	wawla{2.3.1.213} [What Are We Looking At] (Wawla-1.10.2-2.3.1.213.jar) 
+	UCH	waystones{2.0.12} [Waystones] (Waystones_1.10.2-2.0.12.jar) 
+	UCH	examplemod{1.0} [examplemod] (WTF-Expedition_1.10.2_v1.5Beta1.jar) 
+	UCH	wtfcore{1.10.2_v1.5} [WTFs-Expedition] (WTF-Expedition_1.10.2_v1.5Beta1.jar) 
+	Loaded coremods (and transformers): 
+ShetiPhian-ASM (shetiphiancore-1.10.0-3.3.7.jar)
+  shetiphian.core.asm.ClassTransformer
+LoadingPlugin (Quark-r1.1-70.jar)
+  vazkii.quark.base.asm.ClassTransformer
+AstralCore (astralsorcery-1.1.4-beta.jar)
+  
+FMLPlugin (InventoryTweaks-1.61-58.jar)
+  invtweaks.forge.asm.ContainerTransformer
+CCLCorePlugin (CodeChickenLib-1.10.2-2.5.4.218-universal.jar)
+  codechicken.lib.asm.ClassHeirachyManager
+  codechicken.lib.asm.CCL_ASMTransformer
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 378.66' Renderer: 'GeForce GTX 1060 6GB/PCIe/SSE2'
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselsandbitsIntegration (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	Pulsar/natura loaded Pulses: 
+		- NaturaCommons (Enabled/Forced)
+		- NaturaOverworld (Enabled/Not Forced)
+		- NaturaNether (Enabled/Not Forced)
+		- NaturaEntities (Enabled/Not Forced)
+		- NaturaOredict (Enabled/Forced)
+		- NaturaWorld (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	CodeChickenLib Invalid Fingerprint Reports: 
+	CodeChickenCore Invalid Fingerprint Reports: 
+	EnderStorage Invalid Fingerprint Reports: 

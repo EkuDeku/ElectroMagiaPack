@@ -1,0 +1,78 @@
+[
+  {
+    "color": "black",
+    "description": "A simple black bag."
+  },
+  {
+    "color": "red",
+    "description": "A simple red bag."
+  },
+  {
+    "color": "brown",
+    "description": "A simple brown bag."
+  },
+  {
+    "color": "blue",
+    "description": "A simple blue bag."
+  },
+  {
+    "color": "cyan",
+    "description": "A simple cyan bag."
+  },
+  {
+    "color": "gray",
+    "description": "A simple gray bag."
+  },
+  {
+    "color": "gray",
+    "description": "A simple gray bag."
+  },
+  {
+    "color": "green",
+    "description": "A simple green bag."
+  },
+  {
+    "color": "lightBlue",
+    "description": "A simple lightblue bag."
+  },
+  {
+    "color": "lime",
+    "description": "A simple lime bag."
+  },
+  {
+    "color": "magenta",
+    "description": "A simple magenta bag."
+  },
+  {
+    "color": "orange",
+    "description": "A simple orange bag."
+  },
+  {
+    "color": "pink",
+    "description": "A simple pink bag."
+  },
+  {
+    "color": "purple",
+    "description": "A simple purple bag."
+  },
+  {
+    "color": "silver",
+    "description": "A simple silver bag."
+  },
+  {
+    "color": "white",
+    "description": "A simple white bag."
+  },
+  {
+    "color": "yellow",
+    "description": "A simple yellow bag."
+  },
+  {
+    "color": "ender",
+    "description": "A magical bag used to transport items cross time and space."
+  },
+  {
+    "color": "void",
+    "description": "A magical bag that swallows everything put into it."
+  }
+]

@@ -1,0 +1,72 @@
+EMP 2.0 Changelog
+
+Version 2.1.2b
+
+- Advanced Chimneys
+- Additional Banners
+- Astral Sorcery
+- AutoRegLib
+- Bagginses
+- Baubles
+- Better Agricuture
+- Bibliocraft
+- Blood Magic
+- Botania
+- Chameleon
+- Chisel and Bits
+- CodeChickenCore
+- CodeChickenLib
+- Compatlayer
+- Cooking For Blockheads
+- Craft Tweaker
+- CustomMainMenu
+- Discord - Disabled
+- Disenchanter
+- Drawers Bits
+- Earthworks
+- Embers
+- Enderstorage
+- Fairylights
+- Fast Leaf Decay
+- Flatcoloredblocks
+- Forge Endertech
+- FTBLib
+- FTBUtilities
+- Grapplemode
+- Guide API
+- Hopperducts
+- Hwyla
+- Immersive Engineering
+- Iron Chest
+- JEI
+- Just Enough Dimensions
+- Just Enough Resources
+- Lore Expansion
+- Mantle
+- MC Multi Part
+- Mod Tweaker
+- Morpheus
+- MTLib
+- Natura
+- Not Enough Wands
+- Packing Tape
+- Pam's Harvestcraft
+- Platforms
+- Quark
+- Railcraft
+- Refinedstorage
+- Reliquary
+- Roots
+- RTG
+- Rustic
+- shetiphianCore
+- Steves Carts
+- Storage Drawers
+- Storage Drawers Extra
+- TAIGA
+- Tinkers' Construct
+- Totemic
+- Waila Harvestability
+- Wawla
+- Waystones
+- WTF Expedition
