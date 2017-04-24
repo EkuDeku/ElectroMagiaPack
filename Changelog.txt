@@ -5,6 +5,7 @@ Version 2.1.2b
 - Advanced Chimneys
 - Additional Banners
 - Animania
+- ArchitectureCraft
 - Astral Sorcery
 - AutoRegLib
 - Bagginses
