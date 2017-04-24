@@ -4,25 +4,28 @@ Version 2.1.2b
 
 - Advanced Chimneys
 - Additional Banners
+- Animania
 - Astral Sorcery
 - AutoRegLib
 - Bagginses
 - Baubles
-- Better Agricuture
 - Bibliocraft
+- Biome Bundle
 - Blood Magic
 - Botania
 - Chameleon
+- Chisel
 - Chisel and Bits
 - CodeChickenCore
 - CodeChickenLib
+- CoFHCore
 - Compatlayer
 - Cooking For Blockheads
 - Craft Tweaker
 - CustomMainMenu
 - Discord - Disabled
 - Disenchanter
-- Drawers Bits
+- DrawersBits
 - Earthworks
 - Embers
 - Enderstorage
@@ -37,11 +40,15 @@ Version 2.1.2b
 - Hopperducts
 - Hwyla
 - Immersive Engineering
+- InventoryTweaks
 - Iron Chest
 - JEI
+- JourneyMap
 - Just Enough Dimensions
 - Just Enough Resources
 - Lore Expansion
+- MalisisCore
+- MalisisDoors
 - Mantle
 - MC Multi Part
 - Mod Tweaker
@@ -49,22 +56,20 @@ Version 2.1.2b
 - MTLib
 - Natura
 - Not Enough Wands
+- OpenTerrainGenerator
 - Packing Tape
 - Pam's Harvestcraft
-- Platforms
 - Quark
 - Railcraft
 - Refinedstorage
 - Reliquary
 - Roots
-- RTG
 - Rustic
-- shetiphianCore
 - Steves Carts
 - Storage Drawers
-- Storage Drawers Extra
-- TAIGA
+- Storage Drawers Extras
 - Tinkers' Construct
+- Thermal Foundation
 - Totemic
 - Waila Harvestability
 - Wawla
