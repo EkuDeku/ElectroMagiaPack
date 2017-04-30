@@ -43,16 +43,11 @@
   },
   "world": {
     "chunk_loading": true,
+    "log_chunkloading": false,
     "blocked_entities": [],
     "chunk_claiming": true,
     "safe_spawn": false,
     "spawn_area_in_sp": false
-  },
-  "ranks": {
-    "override_chat_short_urls": true,
-    "override_chat": true,
-    "override_commands": true,
-    "enabled": false
   },
   "webapi": {
     "update_interval": 5,
@@ -64,5 +59,10 @@
     "enable_motd": true,
     "enable_starting_items": true,
     "starting_items": []
+  },
+  "ranks": {
+    "override_chat": true,
+    "override_commands": true,
+    "enabled": false
   }
 }

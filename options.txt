@@ -4,7 +4,7 @@ mouseSensitivity:0.5
 fov:0.0
 gamma:0.0
 saturation:0.0
-renderDistance:32
+renderDistance:2
 guiScale:2
 particles:2
 bobView:false
@@ -44,7 +44,7 @@ mipmapLevels:4
 forceUnicodeFont:false
 reducedDebugInfo:false
 useNativeTransport:true
-entityShadows:true
+entityShadows:false
 mainHand:right
 attackIndicator:1
 showSubtitles:false
@@ -142,10 +142,12 @@ key_waila.keybind.usage:75
 key_invtweaks.key.sort:0
 key_key.modifier:34
 key_key.submode:0
+key_key.rs.focusSearchBar:15
+key_xreliquary.keybind.fortune_coin:0
 key_key.journeymap.map_toggle:36
 key_key.journeymap.zoom_in:13
 key_key.journeymap.zoom_out:12
-key_key.journeymap.minimap_type:26
+key_key.journeymap.minimap_type:27
 key_key.journeymap.minimap_type:27
 key_key.journeymap.minimap_preset:43
 key_key.journeymap.create_waypoint:48
@@ -154,6 +156,7 @@ key_keybind.railcraft.loco.faster:0
 key_keybind.railcraft.loco.slower:0
 key_keybind.railcraft.loco.mode:0
 key_keybind.railcraft.loco.whistle:0
+key_OTG Pregenerator HUD toggle:61
 soundCategory_master:0.6092715
 soundCategory_music:0.0
 soundCategory_record:0.0

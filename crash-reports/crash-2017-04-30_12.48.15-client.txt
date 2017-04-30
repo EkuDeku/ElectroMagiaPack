@@ -1,0 +1,208 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DummyPlugin (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar)
+  LoadingPlugin (Quark-r1.1-70.jar)
+  MalisisCorePlugin (malisiscore-1.10.2-4.4.0.jar)
+  ChiselCorePlugin (Chisel-MC1.10.2-0.0.10.22.jar)
+  CCLCorePlugin (CodeChickenLib-1.10.2-2.5.8.255-universal.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  CoFH Loading Plugin (CoFHCore-1.10.2-4.1.1.156-universal.jar)
+  AstralCore (astralsorcery-1.3.2-beta.jar)
+Contact their authors BEFORE contacting forge
+
+// Daisy, daisy...
+
+Time: 4/30/17 12:48 PM
+Description: There was a severe problem during mod loading that has caused the game to fail
+
+net.minecraftforge.fml.common.LoaderExceptionModCrash: Caught exception from Just Enough Dimensions (justenoughdimensions)
+Caused by: java.lang.ClassNotFoundException: fi.dy.masa.justenoughdimensions.JustEnoughDimensions
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:191)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at net.minecraftforge.fml.common.ModClassLoader.loadClass(ModClassLoader.java:75)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:344)
+	at net.minecraftforge.fml.common.FMLModContainer.constructMod(FMLModContainer.java:521)
+	at sun.reflect.GeneratedMethodAccessor3.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.sendEventToModContainer(LoadController.java:243)
+	at net.minecraftforge.fml.common.LoadController.propogateStateMessage(LoadController.java:221)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at com.google.common.eventbus.EventSubscriber.handleEvent(EventSubscriber.java:74)
+	at com.google.common.eventbus.SynchronizedEventSubscriber.handleEvent(SynchronizedEventSubscriber.java:47)
+	at com.google.common.eventbus.EventBus.dispatch(EventBus.java:322)
+	at com.google.common.eventbus.EventBus.dispatchQueuedEvents(EventBus.java:304)
+	at com.google.common.eventbus.EventBus.post(EventBus.java:275)
+	at net.minecraftforge.fml.common.LoadController.distributeStateMessage(LoadController.java:145)
+	at net.minecraftforge.fml.common.Loader.loadMods(Loader.java:559)
+	at net.minecraftforge.fml.client.FMLClientHandler.beginMinecraftLoading(FMLClientHandler.java:220)
+	at net.minecraft.client.Minecraft.func_71384_a(Minecraft.java:439)
+	at net.minecraft.client.Minecraft.func_99999_d(Minecraft.java:351)
+	at net.minecraft.client.main.Main.main(SourceFile:124)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:483)
+	at net.minecraft.launchwrapper.Launch.launch(Launch.java:135)
+	at net.minecraft.launchwrapper.Launch.main(Launch.java:28)
+Caused by: java.lang.NullPointerException
+	at net.minecraft.launchwrapper.LaunchClassLoader.findClass(LaunchClassLoader.java:182)
+	... 37 more
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 833640208 bytes (795 MB) / 1412431872 bytes (1347 MB) up to 3817865216 bytes (3641 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx4096m -Xms256m -XX:PermSize=256m
+	IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+	FML: MCP 9.32 Powered by Forge 12.18.3.2254 79 mods loaded, 79 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UC	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UC	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.3.2254.jar) 
+	UC	Forge{12.18.3.2254} [Minecraft Forge] (forge-1.10.2-12.18.3.2254.jar) 
+	UC	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UC	ccl-entityhook{1.0} [ccl-entityhook] (CodeChickenLib-1.10.2-2.5.8.255-universal.jar) 
+	UC	forgeendertech{1.10.2-1.2.2.0} [Forge Endertech] (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar) 
+	UC	adchimneys{1.10.2-1.2.4.1} [Advanced Chimneys] (AdChimneys-1.10.2-1.2.4.1-build.0038.jar) 
+	UC	additionalbanners{1.3.0.22} [Additional Banners] (AdditionalBanners-1.10.2-1.3.0.22.jar) 
+	UC	animania{1.0.4.7} [Animania] (animania-1.10.2-1.0.4.7.jar) 
+	UC	architecturecraft{1.7.1} [ArchitectureCraft] (ArchitectureCraft-1.7.1-mc1.10.2.jar) 
+	UC	astralsorcery{1.3.2-beta} [Astral Sorcery] (astralsorcery-1.3.2-beta.jar) 
+	UC	Quark{r1.1-70} [Quark] (Quark-r1.1-70.jar) 
+	UC	AutoRegLib{1.0-2} [AutoRegLib] (AutoRegLib-1.0-2.jar) 
+	UC	bagginses{2.4.2d} [Bagginses] (Bagginses-1.10.2-3.0.4g.jar) 
+	UC	Baubles{1.3.9} [Baubles] (Baubles-1.10.2-1.3.9.jar) 
+	UC	BiblioCraft{2.2.1} [BiblioCraft] (BiblioCraft[v2.2.1][MC1.10.2].jar) 
+	UC	openterraingenerator{v14} [Open Terrain Generator] (OpenTerrainGenerator-1.10.2-v14.jar) 
+	UC	biomebundle{1.0} [Biome Bundle] (Biome_Bundle-v5.jar) 
+	UC	guideapi{@VERSION@} [Guide-API] (Guide-API-1.10.2-2.0.3-46.jar) 
+	UC	JEI{3.14.7.417} [Just Enough Items] (jei_1.10.2-3.14.7.417.jar) 
+	UC	BloodMagic{1.10.2-2.1.9-78} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.10.2-2.1.9-78.jar) 
+	UC	Botania{r1.9-341} [Botania] (Botania r1.9-341.jar) 
+	UC	Chameleon{1.10-2.2.2} [Chameleon] (Chameleon-1.10-2.2.2.jar) 
+	UC	chisel{MC1.10.2-0.0.10.22} [Chisel] (Chisel-MC1.10.2-0.0.10.22.jar) 
+	UC	mcmultipart{1.4.0} [MCMultiPart] (MCMultiPart-1.4.0-universal.jar) 
+	UC	chiselsandbits{12.12} [Chisels & Bits] (chiselsandbits-12.12.jar) 
+	UC	CodeChickenLib{2.5.8.255} [CodeChicken Lib] (CodeChickenLib-1.10.2-2.5.8.255-universal.jar) 
+	UC	CodeChickenCore{2.4.1.102} [CodeChicken Core] (CodeChickenCore-1.10.2-2.4.1.102-universal.jar) 
+	UC	cofhcore{4.1.1} [CoFH Core] (CoFHCore-1.10.2-4.1.1.156-universal.jar) 
+	UC	cookingforblockheads{4.2.43} [Cooking for Blockheads] (CookingForBlockheads_1.10.2-4.2.43.jar) 
+	UC	crafttweakerjei{1.0.1} [CraftTweaker JEI Support] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UC	MineTweaker3{3.0.24} [MineTweaker 3] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UC	ctgui{1.0.0} [CT-GUI] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UC	custommainmenu{2.0.5} [Custom Main Menu] (CustomMainMenu-MC1.10.2-2.0.5.jar) 
+	UC	disenchanter{1.4} [Disenchanter] (disenchanter-[1.9.4]1.4.jar) 
+	UC	StorageDrawers{1.10.2-3.7.1} [Storage Drawers] (StorageDrawers-1.10.2-3.7.1.jar) 
+	UC	bitdrawers{0.36} [Drawers & Bits] (DrawersBits-1.10.2-0.36.jar) 
+	UC	earthworks{1.2.1} [Earthworks] (Earthworks-1.10.2-1.2.2.jar) 
+	UC	embers{0.104} [Embers] (embers-0.104.jar) 
+	UC	EnderStorage{2.2.1.106} [EnderStorage] (EnderStorage-1.10.2-2.2.1.106-universal.jar) 
+	UC	fairylights{2.1.1} [Fairy Lights] (fairylights-2.1.1-1.10.2.jar) 
+	UC	FastLeaveDecay{1.2.3} [Fast Leave Decay] (FastLeaveDecay-MC1.10.2-1.2.3.jar) 
+	UC	flatcoloredblocks{mc1.10-v4.4} [Flat Colored Blocks] (flatcoloredblocks-mc1.10-v4.4.jar) 
+	UC	Waila{1.8.13-B27_1.10.2} [Waila] (Hwyla-1.8.13-B27_1.10.2.jar) 
+	UC	ftbl{0.0.0} [FTBLib] (FTBLib-1.1x-3.5.4.jar) 
+	UC	ftbu{0.0.0} [FTBUtilities] (FTBUtilities-1.1x-3.5.4.jar) 
+	UC	grapplemod{1.10.2-v9} [Grappling hook mod] (grapplemod-1.10-v9.jar) 
+	UC	hopperducts{1.4.8} [Hopper Ducts] (hopperducts-mc1.9.4-1.4.8.jar) 
+	UC	mantle{1.10.2-1.1.5.205} [Mantle] (Mantle-1.10.2-1.1.5.jar) 
+	UC	tconstruct{1.10.2-2.6.3.500} [Tinkers' Construct] (TConstruct-1.10.2-2.6.3.jar) 
+	UC	immersiveengineering{0.10-57} [Immersive Engineering] (ImmersiveEngineering-0.10-57.jar) 
+	UC	inventorytweaks{1.61-58-a1fd884} [Inventory Tweaks] (InventoryTweaks-1.61-58.jar) 
+	UC	journeymap{1.10.2-5.4.6} [JourneyMap] (journeymap-1.10.2-5.4.6.jar) 
+	UE	justenoughdimensions{1.3.7} [Just Enough Dimensions] (justenoughdimensions-1.10.2-1.3.7.jar) 
+	UC	jeresources{0.5.8.98} [Just Enough Resources] (JustEnoughResources-1.10.2-0.5.8.98.jar) 
+	UC	loreexpansion{1.10.2-1.1.5-10} [Lore Expansion] (LoreExpansion-1.10.2-1.1.5-10.jar) 
+	UC	malisiscore{1.10.2-4.4.0} [MalisisCore] (malisiscore-1.10.2-4.4.0.jar) 
+	UC	malisisdoors{1.10.2-5.2.0} [MalisisDoors] (malisisdoors-1.10.2-5.2.0.jar) 
+	UC	mtlib{@VERSION@} [MTLib] (MTLib-1.0.2.jar) 
+	UC	modtweaker{2.0.11} [Mod Tweaker] (ModTweaker2-2.0.11.jar) 
+	UC	Morpheus{1.10.2-3.1.13} [Morpheus] (Morpheus-1.10.2-3.1.13.jar) 
+	UC	natura{1.10.2-4.1.0.53} [Natura] (natura-1.10.2-4.1.0.53.jar) 
+	UC	notenoughwands{1.5.4} [Not Enough Wands] (notenoughwands-1.1x-1.5.4.jar) 
+	UC	packingtape{0.6.0} [Packing Tape] (PackingTape-1.10.2-0.6.0.jar) 
+	UC	harvestcraft{1.9.4-1.10.2g} [Pam's HarvestCraft] (Pam's HarvestCraft 1.9.4-1.10.2h.jar) 
+	UC	railcraft{10.1.1} [Railcraft] (Railcraft_1.10.2-10.1.1.jar) 
+	UC	refinedstorage{1.2.25} [Refined Storage] (refinedstorage-1.2.25.jar) 
+	UC	xreliquary{1.10.2-1.3.3.659} [Reliquary] (Reliquary-1.10.2-1.3.3.659.jar) 
+	UC	roots{0.208} [Roots] (roots-0.208.jar) 
+	UC	rustic{0.1.2.2} [Rustic] (rustic-0.1.2.2.jar) 
+	UC	stevescarts{2.1.4.83} [Steve's Carts 2] (StevesCarts-1.10.2-2.1.4.83.jar) 
+	UC	storagedrawersextra{1.10-1.1.0} [Storage Drawers Extras] (StorageDrawersExtras-1.10-1.1.0.jar) 
+	UC	thermalfoundation{2.0.5} [Thermal Foundation] (ThermalFoundation-1.10.2-2.0.5.81-universal.jar) 
+	UC	totemic{1.10.2-0.8.3} [Totemic] (Totemic-1.10.2-0.8.3.jar) 
+	UC	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UC	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.2.215.jar) 
+	UC	wawla{2.3.2.215} [What Are We Looking At] (Wawla-1.10.2-2.3.2.215.jar) 
+	UC	waystones{2.0.12} [Waystones] (Waystones_1.10.2-2.0.12.jar) 
+	UC	wtfcore{1.10.2_v1.5} [WTFs Expedition] (WTF-Expedition-WorldGen_1.10.2_-v1.5.1.jar) 
+	Loaded coremods (and transformers): 
+DummyPlugin (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar)
+  
+LoadingPlugin (Quark-r1.1-70.jar)
+  vazkii.quark.base.asm.ClassTransformer
+MalisisCorePlugin (malisiscore-1.10.2-4.4.0.jar)
+  net.malisis.core.util.chunkcollision.ChunkCollisionTransformer
+  net.malisis.core.util.chunkblock.ChunkBlockTransformer
+  net.malisis.core.renderer.transformer.MalisisRendererTransformer
+  net.malisis.core.renderer.icon.asm.TextureMapTransformer
+  net.malisis.core.util.clientnotif.ClientNotifTransformer
+ChiselCorePlugin (Chisel-MC1.10.2-0.0.10.22.jar)
+  team.chisel.common.asm.ChiselTransformer
+CCLCorePlugin (CodeChickenLib-1.10.2-2.5.8.255-universal.jar)
+  codechicken.lib.asm.ClassHeirachyManager
+  codechicken.lib.asm.CCL_ASMTransformer
+FMLPlugin (InventoryTweaks-1.61-58.jar)
+  invtweaks.forge.asm.ContainerTransformer
+CoFH Loading Plugin (CoFHCore-1.10.2-4.1.1.156-universal.jar)
+  cofh.asm.CoFHClassTransformer
+  cofh.asm.repack.codechicken.lib.asm.ClassHierarchyManager
+AstralCore (astralsorcery-1.3.2-beta.jar)
+  
+	GL info: ' Vendor: 'NVIDIA Corporation' Version: '4.5.0 NVIDIA 381.65' Renderer: 'GeForce GTX 1060 6GB/PCIe/SSE2'
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselsandbitsIntegration (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	Pulsar/natura loaded Pulses: 
+		- NaturaCommons (Enabled/Forced)
+		- NaturaOverworld (Enabled/Not Forced)
+		- NaturaNether (Enabled/Not Forced)
+		- NaturaDecorative (Enabled/Not Forced)
+		- NaturaTools (Enabled/Not Forced)
+		- NaturaEntities (Enabled/Not Forced)
+		- NaturaOredict (Enabled/Forced)
+		- NaturaWorld (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)

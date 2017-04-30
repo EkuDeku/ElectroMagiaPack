@@ -1,0 +1,195 @@
+---- Minecraft Crash Report ----
+
+WARNING: coremods are present:
+  DummyPlugin (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar)
+  LoadingPlugin (Quark-r1.1-70.jar)
+  MalisisCorePlugin (malisiscore-1.10.2-4.4.0.jar)
+  ChiselCorePlugin (Chisel-MC1.10.2-0.0.10.22.jar)
+  CCLCorePlugin (CodeChickenLib-1.10.2-2.5.8.255-universal.jar)
+  FMLPlugin (InventoryTweaks-1.61-58.jar)
+  CoFH Loading Plugin (CoFHCore-1.10.2-4.1.1.156-universal.jar)
+  AstralCore (astralsorcery-1.3.2-beta.jar)
+Contact their authors BEFORE contacting forge
+
+// Ooh. Shiny.
+
+Time: 4/30/17 1:05 PM
+Description: Exception in server tick loop
+
+java.lang.OutOfMemoryError: GC overhead limit exceeded
+	at com.khorn.terraincontrol.configuration.io.RawSettingValue.withLineNumber(RawSettingValue.java:143)
+	at com.khorn.terraincontrol.configuration.io.FileSettingsReader.readIntoMap(FileSettingsReader.java:59)
+	at com.khorn.terraincontrol.configuration.io.FileSettingsReader.readIntoMap(FileSettingsReader.java:91)
+	at com.khorn.terraincontrol.configuration.io.FileSettingsReader.read(FileSettingsReader.java:28)
+	at com.khorn.terraincontrol.customobjects.bo3.BO3.onEnable(BO3.java:56)
+	at com.khorn.terraincontrol.customobjects.CustomObjectCollection.load(CustomObjectCollection.java:63)
+	at com.khorn.terraincontrol.customobjects.CustomObjectCollection.<init>(CustomObjectCollection.java:41)
+	at com.khorn.terraincontrol.configuration.ServerConfigProvider.loadCustomObjects(ServerConfigProvider.java:129)
+	at com.khorn.terraincontrol.configuration.ServerConfigProvider.loadSettings(ServerConfigProvider.java:102)
+	at com.khorn.terraincontrol.configuration.ServerConfigProvider.<init>(ServerConfigProvider.java:72)
+	at com.khorn.terraincontrol.forge.WorldLoader.getOrCreateForgeWorld(WorldLoader.java:257)
+	at com.khorn.terraincontrol.forge.WorldLoader.getOrCreateForgeWorld(WorldLoader.java:221)
+	at com.khorn.terraincontrol.forge.TCWorldType.getBiomeProvider(TCWorldType.java:67)
+	at net.minecraft.world.WorldProvider.func_76572_b(WorldProvider.java:56)
+	at net.minecraft.world.WorldProvider.func_76558_a(WorldProvider.java:39)
+	at net.minecraft.world.WorldServer.<init>(WorldServer.java:113)
+	at net.minecraft.server.integrated.IntegratedServer.func_71247_a(IntegratedServer.java:85)
+	at net.minecraft.server.integrated.IntegratedServer.func_71197_b(IntegratedServer.java:120)
+	at net.minecraft.server.MinecraftServer.run(MinecraftServer.java:431)
+	at java.lang.Thread.run(Thread.java:745)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- System Details --
+Details:
+	Minecraft Version: 1.10.2
+	Operating System: Windows 10 (amd64) version 10.0
+	Java Version: 1.8.0_25, Oracle Corporation
+	Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+	Memory: 392053776 bytes (373 MB) / 3890741248 bytes (3710 MB) up to 3890741248 bytes (3710 MB)
+	JVM Flags: 4 total; -XX:HeapDumpPath=MojangTricksIntelDriversForPerformance_javaw.exe_minecraft.exe.heapdump -Xmx4096m -Xms256m -XX:PermSize=256m
+	IntCache: cache: 0, tcache: 0, allocated: 13, tallocated: 95
+	FML: MCP 9.32 Powered by Forge 12.18.3.2254 80 mods loaded, 80 mods active
+	States: 'U' = Unloaded 'L' = Loaded 'C' = Constructed 'H' = Pre-initialized 'I' = Initialized 'J' = Post-initialized 'A' = Available 'D' = Disabled 'E' = Errored
+	UCHIJAAAAAAA	mcp{9.19} [Minecraft Coder Pack] (minecraft.jar) 
+	UCHIJAAAAAAA	FML{8.0.99.99} [Forge Mod Loader] (forge-1.10.2-12.18.3.2254.jar) 
+	UCHIJAAAAAAA	Forge{12.18.3.2254} [Minecraft Forge] (forge-1.10.2-12.18.3.2254.jar) 
+	UCHIJAAAAAAA	<CoFH ASM>{000} [CoFH ASM] (minecraft.jar) 
+	UCHIJAAAAAAA	ccl-entityhook{1.0} [ccl-entityhook] (CodeChickenLib-1.10.2-2.5.8.255-universal.jar) 
+	UCHIJAAAAAAA	forgeendertech{1.10.2-1.2.2.0} [Forge Endertech] (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar) 
+	UCHIJAAAAAAA	adchimneys{1.10.2-1.2.4.1} [Advanced Chimneys] (AdChimneys-1.10.2-1.2.4.1-build.0038.jar) 
+	UCHIJAAAAAAA	additionalbanners{1.3.0.22} [Additional Banners] (AdditionalBanners-1.10.2-1.3.0.22.jar) 
+	UCHIJAAAAAAA	animania{1.0.4.7} [Animania] (animania-1.10.2-1.0.4.7.jar) 
+	UCHIJAAAAAAA	architecturecraft{1.7.1} [ArchitectureCraft] (ArchitectureCraft-1.7.1-mc1.10.2.jar) 
+	UCHIJAAAAAAA	astralsorcery{1.3.2-beta} [Astral Sorcery] (astralsorcery-1.3.2-beta.jar) 
+	UCHIJAAAAAAA	Quark{r1.1-70} [Quark] (Quark-r1.1-70.jar) 
+	UCHIJAAAAAAA	AutoRegLib{1.0-2} [AutoRegLib] (AutoRegLib-1.0-2.jar) 
+	UCHIJAAAAAAA	bagginses{2.4.2d} [Bagginses] (Bagginses-1.10.2-3.0.4g.jar) 
+	UCHIJAAAAAAA	Baubles{1.3.9} [Baubles] (Baubles-1.10.2-1.3.9.jar) 
+	UCHIJAAAAAAA	BiblioCraft{2.2.1} [BiblioCraft] (BiblioCraft[v2.2.1][MC1.10.2].jar) 
+	UCHIJAAAAAAA	openterraingenerator{v14} [Open Terrain Generator] (OpenTerrainGenerator-1.10.2-v17.jar) 
+	UCHIJAAAAAAA	biomebundle{1.0} [Biome Bundle] (Biome_Bundle-v5.jar) 
+	UCHIJAAAAAAA	guideapi{@VERSION@} [Guide-API] (Guide-API-1.10.2-2.0.3-46.jar) 
+	UCHIJAAAAAAA	JEI{3.14.7.417} [Just Enough Items] (jei_1.10.2-3.14.7.417.jar) 
+	UCHIJAAAAAAA	BloodMagic{1.10.2-2.1.9-78} [Blood Magic: Alchemical Wizardry] (BloodMagic-1.10.2-2.1.9-78.jar) 
+	UCHIJAAAAAAA	Botania{r1.9-341} [Botania] (Botania r1.9-341.jar) 
+	UCHIJAAAAAAA	Chameleon{1.10-2.2.2} [Chameleon] (Chameleon-1.10-2.2.2.jar) 
+	UCHIJAAAAAAA	chisel{MC1.10.2-0.0.10.22} [Chisel] (Chisel-MC1.10.2-0.0.10.22.jar) 
+	UCHIJAAAAAAA	mcmultipart{1.4.0} [MCMultiPart] (MCMultiPart-1.4.0-universal.jar) 
+	UCHIJAAAAAAA	chiselsandbits{12.12} [Chisels & Bits] (chiselsandbits-12.12.jar) 
+	UCHIJAAAAAAA	CodeChickenLib{2.5.8.255} [CodeChicken Lib] (CodeChickenLib-1.10.2-2.5.8.255-universal.jar) 
+	UCHIJAAAAAAA	CodeChickenCore{2.4.1.102} [CodeChicken Core] (CodeChickenCore-1.10.2-2.4.1.102-universal.jar) 
+	UCHIJAAAAAAA	cofhcore{4.1.1} [CoFH Core] (CoFHCore-1.10.2-4.1.1.156-universal.jar) 
+	UCHIJAAAAAAA	cookingforblockheads{4.2.43} [Cooking for Blockheads] (CookingForBlockheads_1.10.2-4.2.43.jar) 
+	UCHIJAAAAAAA	crafttweakerjei{1.0.1} [CraftTweaker JEI Support] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UCHIJAAAAAAA	MineTweaker3{3.0.24} [MineTweaker 3] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UCHIJAAAAAAA	ctgui{1.0.0} [CT-GUI] (CraftTweaker-1.10.2-3.0.24.jar) 
+	UCHIJAAAAAAA	custommainmenu{2.0.5} [Custom Main Menu] (CustomMainMenu-MC1.10.2-2.0.5.jar) 
+	UCHIJAAAAAAA	disenchanter{1.4} [Disenchanter] (disenchanter-[1.9.4]1.4.jar) 
+	UCHIJAAAAAAA	StorageDrawers{1.10.2-3.7.2} [Storage Drawers] (StorageDrawers-1.10.2-3.7.2.jar) 
+	UCHIJAAAAAAA	bitdrawers{0.36} [Drawers & Bits] (DrawersBits-1.10.2-0.36.jar) 
+	UCHIJAAAAAAA	earthworks{1.2.1} [Earthworks] (Earthworks-1.10.2-1.2.2.jar) 
+	UCHIJAAAAAAA	embers{0.104} [Embers] (embers-0.104.jar) 
+	UCHIJAAAAAAA	EnderStorage{2.2.1.106} [EnderStorage] (EnderStorage-1.10.2-2.2.1.106-universal.jar) 
+	UCHIJAAAAAAA	fairylights{2.1.1} [Fairy Lights] (fairylights-2.1.1-1.10.2.jar) 
+	UCHIJAAAAAAA	FastLeaveDecay{1.2.3} [Fast Leave Decay] (FastLeaveDecay-MC1.10.2-1.2.3.jar) 
+	UCHIJAAAAAAA	flatcoloredblocks{mc1.10-v4.4} [Flat Colored Blocks] (flatcoloredblocks-mc1.10-v4.4.jar) 
+	UCHIJAAAAAAA	Waila{1.8.13-B27_1.10.2} [Waila] (Hwyla-1.8.13-B27_1.10.2.jar) 
+	UCHIJAAAAAAA	ftbl{0.0.0} [FTBLib] (FTBLib-1.1x-3.5.4.jar) 
+	UCHIJAAAAAAA	ftbu{0.0.0} [FTBUtilities] (FTBUtilities-1.1x-3.5.4.jar) 
+	UCHIJAAAAAAA	grapplemod{1.10.2-v9} [Grappling hook mod] (grapplemod-1.10-v9.jar) 
+	UCHIJAAAAAAA	hopperducts{1.4.8} [Hopper Ducts] (hopperducts-mc1.9.4-1.4.8.jar) 
+	UCHIJAAAAAAA	mantle{1.10.2-1.1.5.205} [Mantle] (Mantle-1.10.2-1.1.5.jar) 
+	UCHIJAAAAAAA	tconstruct{1.10.2-2.6.3.500} [Tinkers' Construct] (TConstruct-1.10.2-2.6.3.jar) 
+	UCHIJAAAAAAA	immersiveengineering{0.10-57} [Immersive Engineering] (ImmersiveEngineering-0.10-57.jar) 
+	UCHIJAAAAAAA	inventorytweaks{1.61-58-a1fd884} [Inventory Tweaks] (InventoryTweaks-1.61-58.jar) 
+	UCHIJAAAAAAA	ironchest{1.10.2-7.0.12.801} [Iron Chest] (ironchest-1.10.2-7.0.12.801.jar) 
+	UCHIJAAAAAAA	journeymap{1.10.2-5.4.6} [JourneyMap] (journeymap-1.10.2-5.4.6.jar) 
+	UCHIJAAAAAAA	justenoughdimensions{1.4.1} [Just Enough Dimensions] (justenoughdimensions-1.10.2-1.4.1.jar) 
+	UCHIJAAAAAAA	jeresources{0.5.8.98} [Just Enough Resources] (JustEnoughResources-1.10.2-0.5.8.98.jar) 
+	UCHIJAAAAAAA	loreexpansion{1.10.2-1.1.5-10} [Lore Expansion] (LoreExpansion-1.10.2-1.1.5-10.jar) 
+	UCHIJAAAAAAA	malisiscore{1.10.2-4.4.0} [MalisisCore] (malisiscore-1.10.2-4.4.0.jar) 
+	UCHIJAAAAAAA	malisisdoors{1.10.2-5.2.0} [MalisisDoors] (malisisdoors-1.10.2-5.2.0.jar) 
+	UCHIJAAAAAAA	mtlib{@VERSION@} [MTLib] (MTLib-1.0.2.jar) 
+	UCHIJAAAAAAA	modtweaker{2.0.11} [Mod Tweaker] (ModTweaker2-2.0.11.jar) 
+	UCHIJAAAAAAA	Morpheus{1.10.2-3.1.13} [Morpheus] (Morpheus-1.10.2-3.1.13.jar) 
+	UCHIJAAAAAAA	natura{1.10.2-4.1.0.53} [Natura] (natura-1.10.2-4.1.0.53.jar) 
+	UCHIJAAAAAAA	notenoughwands{1.5.4} [Not Enough Wands] (notenoughwands-1.1x-1.5.4.jar) 
+	UCHIJAAAAAAA	packingtape{0.6.0} [Packing Tape] (PackingTape-1.10.2-0.6.0.jar) 
+	UCHIJAAAAAAA	harvestcraft{1.9.4-1.10.2g} [Pam's HarvestCraft] (Pam's HarvestCraft 1.9.4-1.10.2h.jar) 
+	UCHIJAAAAAAA	railcraft{10.1.1} [Railcraft] (Railcraft_1.10.2-10.1.1.jar) 
+	UCHIJAAAAAAA	refinedstorage{1.2.25} [Refined Storage] (refinedstorage-1.2.25.jar) 
+	UCHIJAAAAAAA	xreliquary{1.10.2-1.3.3.659} [Reliquary] (Reliquary-1.10.2-1.3.3.659.jar) 
+	UCHIJAAAAAAA	roots{0.208} [Roots] (roots-0.208.jar) 
+	UCHIJAAAAAAA	rustic{0.1.2.2} [Rustic] (rustic-0.1.2.2.jar) 
+	UCHIJAAAAAAA	stevescarts{2.1.4.83} [Steve's Carts 2] (StevesCarts-1.10.2-2.1.4.83.jar) 
+	UCHIJAAAAAAA	storagedrawersextra{1.10-1.1.0} [Storage Drawers Extras] (StorageDrawersExtras-1.10-1.1.0.jar) 
+	UCHIJAAAAAAA	thermalfoundation{2.0.5} [Thermal Foundation] (ThermalFoundation-1.10.2-2.0.5.81-universal.jar) 
+	UCHIJAAAAAAA	totemic{1.10.2-0.8.3} [Totemic] (Totemic-1.10.2-0.8.3.jar) 
+	UCHIJAAAAAAA	WailaHarvestability{1.1.9} [Waila Harvestability] (WailaHarvestability-mc1.10.2-1.1.9.jar) 
+	UCHIJAAAAAAA	icse{1.1.0.0} [I Can See Everything] (Wawla-1.10.2-2.3.2.215.jar) 
+	UCHIJAAAAAAA	wawla{2.3.2.215} [What Are We Looking At] (Wawla-1.10.2-2.3.2.215.jar) 
+	UCHIJAAAAAAA	waystones{2.0.12} [Waystones] (Waystones_1.10.2-2.0.12.jar) 
+	UCHIJAAAAAAA	wtfcore{1.10.2_v1.5} [WTFs Expedition] (WTF-Expedition-WorldGen_1.10.2_-v1.5.1.jar) 
+	Loaded coremods (and transformers): 
+DummyPlugin (ForgeEndertech-1.10.2-1.2.2.0-build.0021.jar)
+  
+LoadingPlugin (Quark-r1.1-70.jar)
+  vazkii.quark.base.asm.ClassTransformer
+MalisisCorePlugin (malisiscore-1.10.2-4.4.0.jar)
+  net.malisis.core.util.chunkcollision.ChunkCollisionTransformer
+  net.malisis.core.util.chunkblock.ChunkBlockTransformer
+  net.malisis.core.renderer.transformer.MalisisRendererTransformer
+  net.malisis.core.renderer.icon.asm.TextureMapTransformer
+  net.malisis.core.util.clientnotif.ClientNotifTransformer
+ChiselCorePlugin (Chisel-MC1.10.2-0.0.10.22.jar)
+  team.chisel.common.asm.ChiselTransformer
+CCLCorePlugin (CodeChickenLib-1.10.2-2.5.8.255-universal.jar)
+  codechicken.lib.asm.ClassHeirachyManager
+  codechicken.lib.asm.CCL_ASMTransformer
+FMLPlugin (InventoryTweaks-1.61-58.jar)
+  invtweaks.forge.asm.ContainerTransformer
+CoFH Loading Plugin (CoFHCore-1.10.2-4.1.1.156-universal.jar)
+  cofh.asm.CoFHClassTransformer
+  cofh.asm.repack.codechicken.lib.asm.ClassHierarchyManager
+AstralCore (astralsorcery-1.3.2-beta.jar)
+  
+	GL info: ~~ERROR~~ RuntimeException: No OpenGL context found in the current thread.
+	Pulsar/tconstruct loaded Pulses: 
+		- TinkerCommons (Enabled/Forced)
+		- TinkerWorld (Enabled/Not Forced)
+		- TinkerTools (Enabled/Not Forced)
+		- TinkerHarvestTools (Enabled/Forced)
+		- TinkerMeleeWeapons (Enabled/Forced)
+		- TinkerRangedWeapons (Enabled/Forced)
+		- TinkerModifiers (Enabled/Forced)
+		- TinkerSmeltery (Enabled/Not Forced)
+		- TinkerGadgets (Enabled/Not Forced)
+		- TinkerOredict (Enabled/Forced)
+		- TinkerIntegration (Enabled/Forced)
+		- TinkerFluids (Enabled/Forced)
+		- TinkerMaterials (Enabled/Forced)
+		- TinkerModelRegister (Enabled/Forced)
+		- chiselsandbitsIntegration (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	Pulsar/natura loaded Pulses: 
+		- NaturaCommons (Enabled/Forced)
+		- NaturaOverworld (Enabled/Not Forced)
+		- NaturaNether (Enabled/Not Forced)
+		- NaturaDecorative (Enabled/Not Forced)
+		- NaturaTools (Enabled/Not Forced)
+		- NaturaEntities (Enabled/Not Forced)
+		- NaturaOredict (Enabled/Forced)
+		- NaturaWorld (Enabled/Not Forced)
+		- WailaIntegration (Enabled/Not Forced)
+
+	CodeChickenLib Invalid Fingerprint Reports: 
+	CodeChickenCore Invalid Fingerprint Reports: 
+	EnderStorage Invalid Fingerprint Reports: 
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 8; []
+	Type: Integrated Server (map_client.txt)
+	Is Modded: Definitely; Client brand changed to 'fml,forge'
